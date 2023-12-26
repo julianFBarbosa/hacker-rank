@@ -1,16 +1,6 @@
 function gemstones(arr) {
 	let gemstoneQuantity = 0;
-	const uniqueMinerals = arr.reduce((acc, str) => {
-		const chars = str.split("");
-
-		chars.forEach((element) => {
-			if (!acc.includes(element)) {
-				acc.push(element);
-			}
-		});
-
-		return acc;
-	}, []);
+	const uniqueMinerals = new Set(...arr.join("").split());
 
 	uniqueMinerals.forEach((mineral) => {
 		if (arr.every((str) => str.includes(mineral))) {
