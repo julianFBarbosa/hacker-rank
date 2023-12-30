@@ -68,7 +68,7 @@ function timeInWords(h, m) {
 	const minutesInWords = getMinutesName(m);
 	const hoursInWords = getHoursName(h, m);
 	let timeInWords = "";
-
+	minutesInWords
 	if (m == 0) {
 		timeInWords = `${hoursInWords} ${minutesInWords}`;
 	} else {
